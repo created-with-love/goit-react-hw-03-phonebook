@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Contacts.module.css';
+import PropTypes from 'prop-types';
 
 const Contacts = ({ contacts, onDeleteBtnClick }) => (
   <div>
@@ -19,5 +20,10 @@ const Contacts = ({ contacts, onDeleteBtnClick }) => (
     </ul>
   </div>
 );
+
+Contacts.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object),
+  onDeleteBtnClick: PropTypes.func.isRequired,
+};
 
 export default Contacts;
