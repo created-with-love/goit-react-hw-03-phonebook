@@ -1,22 +1,42 @@
 import React from 'react';
 import s from './Contacts.module.css';
 import PropTypes from 'prop-types';
-import { FaSearchengin } from 'react-icons/fa';
+import { FaTrash, FaAddressCard } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
+
+const trash = {
+  // backgroundColor: 'black',
+  // width: '30px',
+  // height: '30px',
+  // border: '0px solid black',
+  // borderRadius: '50%',
+  // width: 'fit-content',
+  // blockSize: 'fit-content',
+};
 
 const Contacts = ({ contacts, onDeleteBtnClick }) => (
   <div className={s.list}>
     <ul className={s.list__ul}>
       {contacts.map(person => (
         <li key={person.id} className={s.search__contact}>
-          {person.name} : {person.number}
-          <button
-            className={s.search__button}
-            type="button"
-            onClick={() => onDeleteBtnClick(person.id)}
+          <IconContext.Provider
+            value={{ color: 'black', size: '1.6em', className: 'react-icons' }}
           >
-            Delete
-          </button>
+            <FaAddressCard onClick={() => onDeleteBtnClick(person.id)} />
+          </IconContext.Provider>
+          {person.name} : {person.number}
+          <div className={s.trash}>
+            <IconContext.Provider
+              value={{
+                color: 'red',
+                size: '1.1em',
+                className: 'react-icons',
+                style: { ...trash },
+              }}
+            >
+              <FaTrash onClick={() => onDeleteBtnClick(person.id)} />
+            </IconContext.Provider>
+          </div>
         </li>
       ))}
     </ul>

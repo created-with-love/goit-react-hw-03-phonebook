@@ -32,14 +32,16 @@
 
 .form__button:hover {
   cursor: pointer;
-  background-color: rgba(50, 50, 251, 0.719);
-  border: 1px solid rgba(45, 45, 231, 0.596);
+  color: #fff;
+  background-color: rgba(2, 2, 8, 0.719);
+  border: 1px solid rgba(2, 2, 14, 0.596);
 }
 
 .form__button:disabled:hover {
   cursor: pointer;
+  color: rgba(255, 0, 0, 0.287);
   background-color: rgba(239, 239, 239, 0.3);
-  border: 1px solid rgba(199, 25, 25, 0.589);
+  border: 1px solid rgba(199, 25, 25, 0.424);
 }
 
 .form__label {

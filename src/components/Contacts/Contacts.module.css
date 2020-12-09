@@ -3,23 +3,13 @@
   display: flex;
   justify-content: space-between;
   list-style: circle;
-  align-items: baseline;
+  /* align-items: baseline; */
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  padding: 5px;
+  padding: 7px 5px 7px 5px;
   max-width: 100%;
   margin: o auto o auto;
-}
-
-.search__contact::before {
-  content: '';
-  height: 5px;
-  width: 5px;
-  background-color: rgb(2, 0, 0);
-  border-radius: 50%;
-  display: block;
-  /* margin-right: 7px; */
 }
 
 .search__contact:not(:last-child) {
@@ -67,6 +57,23 @@
   margin: 0;
   padding: 0;
   border: none;
+}
+
+.trash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(7, 1, 1);
+  width: 27px;
+  height: 27px;
+  border: 1px solid black;
+  border-radius: 50%;
+  transition: all 250ms ease-in;
+}
+
+.trash:hover {
+  cursor: pointer;
+  background-color: rgba(236, 143, 143, 0.5);
 }
 
 @media (max-width: 385px) {
