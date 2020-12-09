@@ -1,6 +1,8 @@
 import React from 'react';
 import s from './Contacts.module.css';
 import PropTypes from 'prop-types';
+import { FaSearchengin } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
 
 const Contacts = ({ contacts, onDeleteBtnClick }) => (
   <div className={s.list}>
