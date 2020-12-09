@@ -49,7 +49,7 @@ class Form extends Component {
               id={this.nameId}
               placeholder="Enter name"
               required
-            ></input>
+            />
           </label>
           <label>
             <p className={s.form__label}>Number</p>
@@ -63,15 +63,17 @@ class Form extends Component {
               pattern="[0-9]{3}-{0,1}[0-9]{2}-{0,1}[0-9]{2}"
               required
               placeholder="123-45-67"
-            ></input>
+            />
           </label>
-          <button
-            className={s.form__button}
-            type="submit"
-            disabled={name === '' || number === ''}
-          >
-            Add contact
-          </button>
+          <div className={s.submit__box}>
+            <button
+              className={s.form__button}
+              type="submit"
+              disabled={name === '' || number === ''}
+            >
+              Add contact
+            </button>
+          </div>
         </form>
       </div>
     );

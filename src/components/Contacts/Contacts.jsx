@@ -3,8 +3,8 @@ import s from './Contacts.module.css';
 import PropTypes from 'prop-types';
 
 const Contacts = ({ contacts, onDeleteBtnClick }) => (
-  <div>
-    <ul>
+  <div className={s.list}>
+    <ul className={s.list__ul}>
       {contacts.map(person => (
         <li key={person.id} className={s.search__contact}>
           {person.name} : {person.number}
